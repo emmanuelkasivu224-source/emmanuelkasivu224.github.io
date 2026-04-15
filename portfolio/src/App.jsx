@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import profileImg from './assets/profile.jpg'
 import './App.css'
 
-const Section = ({ children, className = "" }) => {
+const Section = ({ children, className = "", ...props }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   
@@ -11,6 +11,7 @@ const Section = ({ children, className = "" }) => {
     <motion.section
       ref={ref}
       className={className}
+      {...props}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
@@ -72,9 +73,9 @@ function App() {
   const scrollTo = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      const offset = 80
-      const top = element.getBoundingClientRect().top + window.pageYOffset - offset
-      window.scrollTo({ top, behavior: 'smooth' })
+      const yOffset = -80; // Account for fixed navbar height
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
     setMenuOpen(false)
   }
