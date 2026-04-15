@@ -5,88 +5,334 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emmanuel Kasivu Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- DARK MODE TOGGLE -->
-<button class="toggle" onclick="toggleMode()">🌙</button>
+<button class="toggle" onclick="toggleMode()" id="darkModeToggle"><i class="fas fa-moon"></i></button>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <h2>Emmanuel</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <div class="logo">
+    <span class="logo-text">E</span>K
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+    <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
   </ul>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <img src="profile.jpg" class="profile">
-  <h1>Hi, I'm Emmanuel Kasivu 👋</h1>
-  <p>IT Student | Web Developer | Software Engineer</p>
-
-  <a href="cv.pdf" class="btn" download>Download CV</a>
+  <div class="particles">
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 4.5s;"></div>
+  </div>
+  <div class="hero-content">
+    <div class="profile-container">
+      <img src="profile.jpg" class="profile">
+      <div class="profile-ring"></div>
+    </div>
+    <h1 class="hero-title">Hi, I'm <span class="highlight">Emmanuel Kasivu</span> 👋</h1>
+    <p class="hero-subtitle">IT Student | Web Developer | Software Engineer</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/emmanuelkasivu224" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/emmanuelkasivu" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/emmanuelkasivu" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="scroll-down">
+    <a href="#about"><i class="fas fa-chevron-down"></i></a>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section fade">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate IT student focused on building modern, responsive and real-world applications using HTML, CSS, JavaScript and GitHub.
-  </p>
+<section id="about" class="section">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>
+        I am a passionate IT student focused on building modern, responsive and real-world applications. 
+        With a strong foundation in HTML, CSS, JavaScript, and GitHub, I strive to create 
+        innovative solutions that make a difference. I'm always eager to learn new technologies 
+        and take on challenging projects.
+      </p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-count="2">0</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="10">0</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="5">0</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section fade">
-  <h2>Skills</h2>
-
-  <div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>GitHub</span>
-    <span>Python</span>
+<section class="section skills-section">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fab fa-html5"></i></div>
+      <h3>HTML5</h3>
+      <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+      <span class="skill-percent">90%</span>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fab fa-css3"></i></div>
+      <h3>CSS3</h3>
+      <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+      <span class="skill-percent">85%</span>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fab fa-js"></i></div>
+      <h3>JavaScript</h3>
+      <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+      <span class="skill-percent">75%</span>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fab fa-github"></i></div>
+      <h3>GitHub</h3>
+      <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+      <span class="skill-percent">80%</span>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="fab fa-python"></i></div>
+      <h3>Python</h3>
+      <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+      <span class="skill-percent">70%</span>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section fade">
-  <h2>Projects</h2>
-
-  <div class="projects">
-
-    <div class="card">
-      <h3>School Website</h3>
-      <p>Modern responsive website for institutions.</p>
+<section id="projects" class="section">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <div class="project-image">
+        <i class="fas fa-school"></i>
+      </div>
+      <div class="project-content">
+        <h3>School Website</h3>
+        <p>Modern responsive website for educational institutions with full features.</p>
+        <div class="project-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+        <a href="https://github.com/emmanuelkasivu224" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
-
+    <div class="project-card">
+      <div class="project-image">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <div class="project-content">
+        <h3>E-Commerce Platform</h3>
+        <p>Full-featured online shopping platform with cart functionality.</p>
+        <div class="project-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+        <a href="https://github.com/emmanuelkasivu224" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-image">
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="project-content">
+        <h3>Task Manager</h3>
+        <p>Productivity application for managing daily tasks efficiently.</p>
+        <div class="project-tags">
+          <span>JavaScript</span>
+          <span>Local Storage</span>
+        </div>
+        <a href="https://github.com/emmanuelkasivu224" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section fade">
-  <h2>Contact Me</h2>
-  <p>Email: emmanuelkasivu224@gmail.com</p>
-  <p>WhatsApp: +254116089094</p>
+<section id="contact" class="section">
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>emmanuelkasivu224@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <h4>WhatsApp</h4>
+          <p>+254116089094</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h4>Location</h4>
+          <p>Nairobi, Kenya</p>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Emmanuel Kasivu | Elite Portfolio</p>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <span class="logo-text">E</span>K
+    </div>
+    <p class="watermark">© 2026 Emmanuel Kasivu | All right reserved by catech solutions and graphics - catech.co.ke</p>
+    <div class="footer-social">
+      <a href="https://github.com/emmanuelkasivu224" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/emmanuelkasivu" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/emmanuelkasivu" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/254116089094" class="whatsapp" target="_blank">💬</a>
+<a href="https://wa.me/254116089094" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <!-- JAVASCRIPT -->
 <script>
 function toggleMode() {
   document.body.classList.toggle("dark");
+  const toggle = document.getElementById('darkModeToggle');
+  const icon = toggle.querySelector('i');
+  if (document.body.classList.contains('dark')) {
+    icon.className = 'fas fa-sun';
+  } else {
+    icon.className = 'fas fa-moon';
+  }
 }
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.section, .project-card, .skill-card, .contact-item').forEach(el => {
+  observer.observe(el);
+});
+
+// Number counter animation
+const statNumbers = document.querySelectorAll('.stat-number');
+let started = false;
+
+function startCount() {
+  statNumbers.forEach(num => {
+    const target = parseInt(num.getAttribute('data-count'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const updateCount = () => {
+      current += increment;
+      if (current < target) {
+        num.textContent = Math.floor(current) + '+';
+        requestAnimationFrame(updateCount);
+      } else {
+        num.textContent = target + '+';
+      }
+    };
+    updateCount();
+  });
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !started) {
+      started = true;
+      startCount();
+    }
+  });
+}, { threshold: 0.5 });
+
+statsObserver.observe(document.querySelector('.about-stats'));
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 </script>
 
 </body>
